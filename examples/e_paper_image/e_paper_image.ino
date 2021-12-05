@@ -10,9 +10,6 @@ void setup() {
   epd.LDirInit();
   epd.ClearAll();
   
-  epd.SetWidth(200);
-  epd.SetHeight(24); 
-  epd.HDirInit();
   epd.DisplayPartBaseImage(epd_bitmap_bmp_sample);
   epd.DisplayFrame();
 }
