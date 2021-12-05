@@ -1,9 +1,7 @@
-#include <SPI.h>
 #include <Epaper1_54.h>
 #include "stacey.h"
 
-unsigned char image[1024];
-Epd epd(image, 0, 0);
+Epd epd(0, 0);
 
 void setup() {
   // put your setup code here, to run once:

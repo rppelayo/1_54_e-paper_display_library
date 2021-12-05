@@ -1,7 +1,7 @@
-#include <SPI.h>
 #include <Epaper1_54.h>
 
-Epd epd(0, 0);
+unsigned char image[1024];
+Epd epd(image, 0, 0);
 
 void setup() {
   // put your setup code here, to run once:
@@ -16,7 +16,7 @@ void setup() {
   Serial.println("e-Paper paint");
   epd.Clear(1);
   epd.DrawStringAt(30, 4, "Hello Stacey!", &Font16, 0);
-  epd.SetFrameMemory(epd.Buffer(), 0, 10, epd.GetWidth(), epd.GetHeight());
+  epd.SetFrameMemory(epd.GetImage(), 0, 10, epd.GetWidth(), epd.GetHeight());
 
   epd.DisplayFrame();
 }
